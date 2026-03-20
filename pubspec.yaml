@@ -1,0 +1,50 @@
+name: ubel
+description: A real-time auction application built with Flutter
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_riverpod: ^2.4.9
+  go_router: ^13.0.1
+  dio: ^5.4.0
+  supabase_flutter: ^2.0.2
+  freezed_annotation: ^2.4.1
+  json_annotation: ^4.8.1
+  flutter_secure_storage: ^9.0.0
+  cached_network_image: ^3.3.1
+  shimmer: ^3.0.0
+  intl: ^0.18.1
+  uuid: ^4.2.2
+  image_picker: ^1.0.7
+  flutter_slidable: ^3.0.1
+  pull_to_refresh: ^2.0.0
+  flutter_staggered_animations: ^1.1.1
+  connectivity_plus: ^5.0.2
+  flutter_animate: ^4.3.0
+  flutter_dotenv: ^5.1.0
+  # REMOVED: flutter_local_notifications (broken with Android 34)
+  # REMOVED: timezone
+  convex_bottom_bar: ^3.2.0
+  flutter_svg: ^2.0.9
+  blur: ^4.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.1
+  build_runner: ^2.4.7
+  freezed: ^2.4.6
+  json_serializable: ^6.7.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/
+    - .env
