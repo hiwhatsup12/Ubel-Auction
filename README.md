@@ -65,7 +65,7 @@ lib/
 
 1. **Clone the repository**
    ```bash
-   git clone [https://github.com/yourusername/ubel.git](https://github.com/yourusername/ubel.git)
+   git clone [https://github.com/toe-dot-tech/ubel.git](https://github.com/toe-dot-tech/ubel.git)
    cd ubel
    ```
 
